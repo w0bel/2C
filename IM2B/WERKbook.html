@@ -1,0 +1,112 @@
+<!-- I used Github Copilot chat to help me create the image carousels and week 5 cheat sheet for week 5/ p5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2B</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            cursor: url('glovecursor.png'), auto;
+        }
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding-top: 20px;
+        }
+        .bottom-right-link {
+            position: absolute;
+            bottom: 10px; 
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h5>Week 4 - Played a game of chance with paper, dice, and pens.</h5>
+    <h5>Also created a few sketches in P5.</h5>
+    <div class="centered-image carousel">
+        <img id="carousel" src="gamerules.png" style="width: 500px; height: 500px">
+    </div>
+    <a class="bottom-right-link" href="P51.html"><h5>Show me P5 sketch!!!!!!!</h5></a>
+    <script>
+        const images1 = ["gamerules.png", "game1.png", "41silly.png", "42silly.png", "43silly.png", "face.png"];
+        let index1 = 0;
+        document.getElementById("carousel").addEventListener("click", function() {
+            index1 = (index1 + 1) % images1.length;
+            this.src = images1[index1];
+        });
+    </script>
+ <h5>Week 5 - Created more P5 sketches. Added images and webcam. </h5>  
+ <h5>Experimented with stacking webcam filters.</h5>
+ <div class="centered-image carousel">
+     <img id="carousel2" src="invert.png" style="width: 500px; height: 500px">
+ </div>
+ <script>
+     const images2 = ["distort.png", "erode.png", "flower.png", "beans.png", "beansandflower.png"];
+     let index2 = 0;
+     document.getElementById("carousel2").addEventListener("click", function() {
+         index2 = (index2 + 1) % images2.length;
+         this.src = images2[index2];
+     });
+ </script>
+ <div class="centered-image">
+     <video width="500px" height="500px" controls>
+         <source src="cat.mov" type="video/mp4">
+     </video>
+ </div>
+<h5>Week 6 - We organised our belonings. My items were organised into will use the most to least.</h5>
+<h5>Also made a pie chart in P5.</h5>
+<div class="centered-image">
+     <img src="things.png" style="width: 500px; height: 500px">
+<a href="P52.html"><h5>Show me P5 pie chart!!!!!!!</h5></a>
+</div>
+
+<h5>Week 7 - Built a circuit where a light turns on when a buttons pressed. Added a second light.</h5>
+<h5>Also learnt basic Arduino and made the ultrasonic circuit.</h5>
+<div class="centered-image">
+    <img src="kit.jpeg" style="width: 500px; height: 500px">
+    </div>
+
+<div class="centered-image carousel">
+    <video id="carousel3" width="500px" height="500px" controls>
+        <source id="videoSource" src="onelight.MOV" type="video/mp4">
+    </video>
+</div>
+<script>
+    const videos = ["onelight.MOV", "twolight.MOV"];
+    let index3 = 0;
+    document.getElementById("carousel3").addEventListener("click", function() {
+        index3 = (index3 + 1) % videos.length;
+        let video = document.getElementById("carousel3");
+        let source = document.getElementById("videoSource");
+        source.src = videos[index3];
+        video.load();
+    });
+</script>
+
+<h5>Week 8 - Built another circuit. This one was called Fish Playground. </h5>
+    <div class="centered-image">
+        <img src="Fishplayground.jpeg" style="width: 500px; height: 500px">
+    </div>
+
+<h5>Week 9 - The circuit we built this week used a sensor to turn on a light.</h5>
+<div class="centered-image">
+    <img src="ciruitweek9.jpeg" style="width: 500px; height: 500px">
+</div>
+<div class="centered-image">
+    <video width="500px" height="500px" controls>
+        <source src="week9vid.MOV" type="video/mp4">
+    </video>
+</div>
+
+ </body>
+ </html>

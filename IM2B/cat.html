@@ -1,0 +1,164 @@
+<style>
+    body {
+        margin: 0;
+        
+    }
+
+    body {
+    cursor: url("catcursor3.png"), auto;
+} 
+
+    .fullscreen-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .fullscreen-bg__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 100px;
+        position: relative;
+        z-index: 1;
+    }
+
+    p {
+        font-family: Arial;
+        font-size: 40px;
+    }
+
+    .image-text-container {
+    display: flex;
+    align-items: center; 
+}
+
+
+    h1:first-of-type {
+        background-color: red;
+        color: white; 
+    }
+
+    h1:nth-of-type(2) {
+    background-color: orange;
+    color: white; 
+}
+
+h1:nth-of-type(3) {
+    background-color: yellow;
+    color: white; 
+}
+
+}
+
+        .image-begind {
+            position: relative; 
+            z-index: 0;
+        }
+
+    .dartpop {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: popup 1s ease-out forwards; 
+        display: none;
+        animation: popup 1s ease-out forwards, thump 0.5s ease-in-out 1s infinite;
+    }
+
+    @keyframes popup {
+        0% { transform: translateX(-50%) translateY(100%); }
+        100% { transform: translateX(-50%) translateY(0); }
+    } 
+    @keyframes thump {
+        0%, 100% { transform: translateX(-50%) scale(1); }
+        50% { transform: translateX(-50%) scale(1.1); }
+    }
+
+    .hidden-initially {
+        display: none;
+    }
+
+    .rainbow {
+        background: red; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(left, red , orange, yellow, green, blue, indigo, violet);
+        background: -o-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+        background: -moz-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+        background: linear-gradient(to right, red, orange , yellow, green, blue, indigo, violet);
+    }
+
+</style>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.querySelector('.fullscreen-bg').style.display = 'none';
+            document.querySelector('.image-begind').style.display = 'none';
+            document.querySelector('.dartpop').style.display = 'block';
+            document.body.classList.add('rainbow');
+        }, 5000);
+
+        setTimeout(function() {
+            document.querySelector('.dartpop').style.display = 'none';
+            document.body.classList.remove('rainbow');
+            var elements = document.querySelectorAll('.hidden-initially');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'block';
+            }
+        }, 10000);
+    };
+</script>
+
+
+<div class="fullscreen-bg">
+    <img src="icegif-953.gif" alt="Sparkle gif" class="fullscreen-bg__video">
+</div>
+
+<img src="PEW3.png" style="width: 100%; height: 100%;" class="image-begind">
+
+<img src="DartPop.png" style="width: 1000px; height: auto" class="dartpop">
+
+<h1 class="hidden-initially"> Week One</h1>
+<div class="image-text-container">
+    <img src="1png.png" style="width: 500px; height: auto" class="hidden-initially">
+    <p class="hidden-initially">These drawings are my initial eight ideas for website designs. I decided not to go with any of them however, as I felt I was more inspired by my housemates cat than any of these ideas which I drew up.
+</p>
+</div>
+<div class="image-text-container">
+    <img src="Molly.jpeg" style="width: 500px; height: auto" class="hidden-initially">
+    <p class="hidden-initially"> During the first week I thought back to Neal Stephenson's book <a href="https://en.wikipedia.org/wiki/Snow_Crash" target="_blank">Snow Crash</a> (1992) and William Gibson's 1984 novel <a href="https://en.wikipedia.org/wiki/Neuromancer" target="_blank">Neuromancer</a>. I was reminded of these two books as we discussed the new <a href="https://www.apple.com/apple-vision-pro/" target="_blank">Apple Vision Pros</a> during the class. Both books although written at the end of the 20th centruy, somewhat predicted today's technology. In Snow Crash people are able to "goggle in" to the Metaverse, a virtual reality world. Similarly in Neuromancer, the main character Case is able to "jack in" to cyberspace and his companion Molly has surgically implatent mirrorshades which enhance her vision. It's interesting to see what what was fiction during the 80s-90s is becoming reality, especially when both books are so dystopian. 
+</p>
+</div>   
+    
+<h1 class="hidden-initially"> Week Two </h1>
+<div class="image-text-container">
+    <img src="2png.png" style="width: 500px; height: auto" class="hidden-initially">
+    <img src="3png.png" style="width: 500px; height: auto" class="hidden-initially">
+    <p class="hidden-initially">In these two images I have drawn a rough sketch of the website. I've drawn both of my pages however, these were just my inital ideas and since drawing these I've made some changes. 
+ </p>
+ </div>
+ <div class="image-text-container">
+ <img src="../InteractiveMedia/WorkBooks/Images/progress1.png" style="width: 500px; height: auto" class="hidden-initially">
+ <img src="../InteractiveMedia/WorkBooks/Images/progress2.png" style="width: 500px; height: auto" class="hidden-initially">
+ <p class="hidden-initially">These images are two screenshots that I took as I was just starting out my website. 
+</p>
+</div>
+
+<h1 class="hidden-initially"> Week Three </h1>
+<div class="image-text-container">
+<img src="4png.png" style="width: 500px; height: auto" class="hidden-initially"> 
+<p class="hidden-initially">In week three we discussed fluid/ responsive design and these are my drawings of how my website might interact on a phone screen. My website as I've been building it has evolved from these designs so would look slight different. As well as change of some design elements, I'm still wrapping my head around the fluid design things and as of right now my website is not transferable to a phone screen. 
+</p>
+</div>
+
